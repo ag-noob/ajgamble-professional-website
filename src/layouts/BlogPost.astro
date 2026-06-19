@@ -20,24 +20,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0;
 			}
 .hero-image {
-    width: 100%;
-    /* This creates a specific 'banner' shape regardless of the screen size */
-    aspect-ratio: 16 / 5; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    /* 'cover' will fill the 16:5 space, but you can see more of the photo */
-    object-fit: cover;
-    /* This centers the focus on your face/desk area */
-    object-position: center; 
-}
+				width: 100%;
+				aspect-ratio: 4 / 3;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 			.hero-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
