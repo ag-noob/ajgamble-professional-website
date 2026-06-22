@@ -3,12 +3,14 @@ const today = new Date();
 ---
 
 <footer>
-	<div class="contact">
-		<a id="contact-email" href="#" data-user="aj.gamble321" data-domain="gmail.com">Email Me</a>
-		<span class="divider">|</span>
-		<a href="https://www.linkedin.com/in/ajgamble" target="_blank" rel="noopener">LinkedIn</a>
+	<div class="wrap">
+		<div class="mark">AJ Gamble</div>
+		<div class="links">
+			<a id="contact-email" href="#" data-user="aj.gamble321" data-domain="gmail.com">Email Me</a>
+			<a href="https://www.linkedin.com/in/ajgamble" target="_blank" rel="noopener">LinkedIn</a>
+		</div>
+		<span class="rights">&copy; {today.getFullYear()} &middot; All rights reserved</span>
 	</div>
-	&copy; {today.getFullYear()} AJ Gamble. All rights reserved.
 </footer>
 <script>
 	const link = document.getElementById('contact-email');
@@ -20,27 +22,51 @@ const today = new Date();
 </script>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
+		border-top: 1px solid var(--line);
 	}
-	.contact {
+	.wrap {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 96px;
+		height: 108px;
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		gap: 0.75em;
-		margin-bottom: 1em;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 12px;
 	}
-	.contact a {
-		text-decoration: none;
-		color: var(--accent);
+	.mark {
+		font-family: 'Spectral', Georgia, serif;
+		font-size: 18px;
 		font-weight: 600;
+		color: var(--paper);
 	}
-	.contact a:hover {
-		text-decoration: underline;
+	.links {
+		display: flex;
+		gap: 30px;
 	}
-	.divider {
-		color: rgb(var(--gray));
+	.links a {
+		font-family: 'Archivo', sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.03em;
+		color: var(--soft);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.links a:hover {
+		color: var(--brass);
+	}
+	.rights {
+		font-family: 'Archivo', sans-serif;
+		font-size: 13px;
+		color: var(--soft);
+	}
+	@media (max-width: 720px) {
+		.wrap {
+			padding: 16px 24px;
+			height: auto;
+			justify-content: center;
+			text-align: center;
+		}
 	}
 </style>

@@ -1,45 +1,332 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'AJ Gamble | Operations & Sales Leader';
+const description =
+	'Driving supply chain, forecasting, and process excellence for manufacturing and industrial sales teams.';
 ---
 
-<Layout
-	title="AJ Gamble | Operations & Sales Leader"
-	description="Driving supply chain, forecasting, and process excellence for manufacturing and industrial sales teams."
-	heroImage="/Gemini_copy_Generated_Image_2r54f22r54f22r54.jpg"
->
-<p style="font-size: 1.4rem; text-align: center; color: #555; margin-top: -1rem;">
-    I turn operational chaos into systems that scale — driving supply chain, forecasting, and process excellence for manufacturing and industrial sales teams.
-</p>
-<div style="margin-top: 2rem; padding: 2rem 0;">
-        <a href="/about" style="background: #000; color: #fff; padding: 1rem 2rem; text-decoration: none; font-weight:  bold; border-radius: 4px;">
-            View My Operational Philosophy
-        </a>
-    </div>
-    <div style="margin-top: 3rem;">
-        <h2>The Strategic Edge</h2>
-        <p>I don't believe in "band-aid" fixes. I believe in architectural solutions that eliminate bottlenecks, optimize throughput, and maximize customer value.</p>
-    </div>
-    <section style="margin: 4rem 0; padding: 3rem; background: #f9f9f9; border-radius: 8px;">
-        <h2 style="font-size: 2rem; margin-bottom: 2rem;">Operational Impact</h2>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;">
-            <div>
-                <p style="font-size: 2.25rem; font-weight: bold; margin-bottom: 0.5rem;">55% &rarr; 95%</p>
-                <p style="color: #555;">On-time delivery performance turned around at McKissick Products</p>
-            </div>
-            <div>
-                <p style="font-size: 2.25rem; font-weight: bold; margin-bottom: 0.5rem;">$31M &rarr; $82M</p>
-                <p style="color: #555;">Annual revenue scaled in 4 years at The Crosby Group</p>
-            </div>
-            <div>
-                <p style="font-size: 2.25rem; font-weight: bold; margin-bottom: 0.5rem;">$1.2M</p>
-                <p style="color: #555;">Annual sales at Industrial Splicing, outperforming the next agent by 30%+</p>
-            </div>
-        </div>
-        <div style="margin-top: 2.5rem; text-align: center;">
-            <a href="/experience" style="color: #000; font-weight: bold; text-decoration: underline;">
-                See the full case studies &rarr;
-            </a>
-        </div>
-    </section>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image="/Gemini_copy_Generated_Image_2r54f22r54f22r54.jpg" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<div class="hero-copy">
+					<div class="kicker">Operations &amp; Sales Leader</div>
+					<h1>I turn operational chaos into <em>systems that scale.</em></h1>
+					<p class="sub">
+						Driving supply chain, forecasting, and process excellence for manufacturing and industrial sales teams.
+					</p>
+					<a href="/about" class="cta-link">View my operational philosophy <span class="arr">&rarr;</span></a>
+				</div>
+				<div class="portrait">
+					<img src="/Gemini_copy_Generated_Image_2r54f22r54f22r54.jpg" alt="AJ Gamble" />
+					<span class="frame"></span>
+				</div>
+			</section>
 
-</Layout>
+			<section class="edge">
+				<div class="label">The Strategic Edge</div>
+				<p>
+					I don&rsquo;t believe in <em>&ldquo;band-aid&rdquo;</em> fixes. I believe in architectural solutions that eliminate
+					bottlenecks, optimize throughput, and maximize customer value.
+				</p>
+			</section>
+
+			<section class="impact">
+				<div class="impact-head">
+					<div class="label">Operational Impact</div>
+					<h2>A proven, measurable track record</h2>
+				</div>
+				<div class="stats">
+					<div class="stat">
+						<div class="big">55%<span class="to">&rarr;</span>95%</div>
+						<div class="co">McKissick Products</div>
+						<div class="dsc">On-time delivery performance turned around.</div>
+					</div>
+					<div class="stat">
+						<div class="big">$31M<span class="to">&rarr;</span>$82M</div>
+						<div class="co">The Crosby Group</div>
+						<div class="dsc">Annual revenue scaled within four years.</div>
+					</div>
+					<div class="stat">
+						<div class="big">$1.2M</div>
+						<div class="co">Industrial Splicing</div>
+						<div class="dsc">Annual sales &mdash; outperforming the next agent by 30%+.</div>
+					</div>
+				</div>
+				<div class="more">
+					<a href="/experience">See the full case studies &rarr;</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 96px;
+		box-sizing: border-box;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: 1.15fr 0.85fr;
+		gap: 80px;
+		padding: 96px 0 100px;
+		align-items: center;
+	}
+	.kicker {
+		font-size: 12px;
+		letter-spacing: 0.28em;
+		text-transform: uppercase;
+		color: var(--brass);
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+	.hero h1 {
+		font-size: 78px;
+		line-height: 1.04;
+		font-weight: 500;
+		letter-spacing: -0.015em;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.hero h1 em {
+		font-style: italic;
+		color: var(--brass);
+	}
+	.sub {
+		font-size: 20px;
+		line-height: 1.6;
+		color: var(--soft);
+		max-width: 500px;
+		margin: 34px 0 42px;
+	}
+	.cta-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 14px;
+		color: var(--paper);
+		text-decoration: none;
+		font-size: 15px;
+		font-weight: 500;
+		border-bottom: 1px solid var(--brass);
+		padding-bottom: 7px;
+		transition: color 0.2s ease;
+	}
+	.cta-link:hover {
+		color: var(--brass-hover);
+	}
+	.cta-link .arr {
+		color: var(--brass);
+	}
+	.portrait {
+		position: relative;
+		height: 580px;
+		border-radius: 3px;
+		overflow: hidden;
+		border: 1px solid var(--line);
+		background-image: repeating-linear-gradient(135deg, transparent 0 15px, oklch(0.3 0.016 264) 15px 16px);
+	}
+	.portrait img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		border-radius: 0;
+	}
+	.portrait .frame {
+		position: absolute;
+		inset: 18px;
+		border: 1px solid var(--brass);
+		opacity: 0.35;
+		border-radius: 2px;
+		pointer-events: none;
+	}
+
+	.edge {
+		padding: 84px 0;
+		border-top: 1px solid var(--line);
+		border-bottom: 1px solid var(--line);
+		text-align: center;
+	}
+	.edge .label {
+		font-size: 12px;
+		letter-spacing: 0.28em;
+		text-transform: uppercase;
+		color: var(--brass);
+		font-weight: 600;
+		margin-bottom: 34px;
+	}
+	.edge p {
+		font-size: 40px;
+		line-height: 1.4;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		margin: 0 auto;
+		max-width: 1000px;
+		text-wrap: balance;
+		font-family: 'Spectral', Georgia, serif;
+	}
+	.edge p em {
+		font-style: italic;
+		color: var(--brass);
+	}
+
+	.impact {
+		padding: 90px 0 96px;
+	}
+	.impact-head {
+		text-align: center;
+		margin-bottom: 64px;
+	}
+	.impact-head .label {
+		font-size: 12px;
+		letter-spacing: 0.28em;
+		text-transform: uppercase;
+		color: var(--brass);
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+	.impact-head h2 {
+		font-size: 38px;
+		font-weight: 500;
+		margin: 0;
+		letter-spacing: -0.01em;
+	}
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0;
+	}
+	.stat {
+		padding: 0 20px;
+		text-align: center;
+		border-left: 1px solid var(--line);
+		min-width: 0;
+	}
+	.stat:first-child {
+		border-left: none;
+	}
+	.stat .big {
+		font-family: 'Spectral', Georgia, serif;
+		font-size: 42px;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		white-space: nowrap;
+	}
+	.stat .big .to {
+		color: var(--brass);
+		font-style: italic;
+		font-size: 26px;
+	}
+	.stat .co {
+		font-size: 12px;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--brass);
+		margin: 24px 0 14px;
+		font-weight: 600;
+	}
+	.stat .dsc {
+		font-size: 16px;
+		line-height: 1.55;
+		color: var(--soft);
+		max-width: 280px;
+		margin: 0 auto;
+	}
+	.more {
+		text-align: center;
+		margin-top: 70px;
+	}
+	.more a {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		color: var(--bg);
+		background: var(--brass);
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		padding: 16px 30px;
+		border-radius: 2px;
+		transition: background-color 0.2s ease;
+	}
+	.more a:hover {
+		background: var(--brass-hover);
+	}
+
+	@media (max-width: 900px) {
+		.hero {
+			grid-template-columns: 1fr;
+			gap: 48px;
+			padding: 56px 0 64px;
+		}
+		.hero h1 {
+			font-size: 52px;
+		}
+		.portrait {
+			height: 380px;
+		}
+	}
+
+	@media (max-width: 720px) {
+		main {
+			padding: 0 24px;
+		}
+		.edge p {
+			font-size: 28px;
+		}
+		.stats {
+			grid-template-columns: 1fr;
+			gap: 48px;
+		}
+		.stat {
+			border-left: none;
+			padding: 0;
+		}
+		.impact-head h2 {
+			font-size: 30px;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.hero,
+		.edge,
+		.impact {
+			animation: reveal 0.6s ease both;
+		}
+		.edge {
+			animation-delay: 0.05s;
+		}
+		.impact {
+			animation-delay: 0.1s;
+		}
+	}
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>
