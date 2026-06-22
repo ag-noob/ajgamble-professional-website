@@ -23,11 +23,15 @@ const { title, description, heroImage } = Astro.props;
 			}
 			.hero-image {
 				width: 100%;
+				max-width: 1280px;
+				margin: 0 auto;
+				padding: 48px 96px 0;
 				aspect-ratio: 4 / 3;
 				overflow: hidden;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				box-sizing: border-box;
 			}
 			.hero-image img {
 				width: 100%;
@@ -36,15 +40,15 @@ const { title, description, heroImage } = Astro.props;
 				object-position: center;
 				display: block;
 				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				border-radius: 3px;
+				border: 1px solid var(--line);
 			}
 			.prose {
 				width: 960px;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
-				color: rgb(var(--gray-dark));
+				color: var(--paper);
 			}
 			.title {
 				margin-bottom: 1em;
@@ -54,6 +58,16 @@ const { title, description, heroImage } = Astro.props;
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+			}
+			.title hr {
+				max-width: 200px;
+				margin: 0 auto;
+				border-top: 1px solid var(--line);
+			}
+			@media (max-width: 720px) {
+				.hero-image {
+					padding: 24px 24px 0;
+				}
 			}
 		</style>
 	</head>
